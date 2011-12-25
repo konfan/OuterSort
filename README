@@ -1,0 +1,12 @@
+
+ what i need is  
+ read data from big file
+ merge the same line and count the number
+ sort by most often used freq
+ make memory used less than 20MB
+
+
+ this need these steps below:
+    split input into small file slice
+    sort small file
+    merge them into a big one
