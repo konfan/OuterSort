@@ -12,3 +12,7 @@ typedef struct fileslice_map {
 
 extern FMAP * gMap;
 
+#define BLOCK 1024
+#define S_10M (1024*1024*10)
+
+
