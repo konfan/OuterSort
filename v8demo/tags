@@ -1,0 +1,24 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+GetInstance	v8demo.cpp	/^v8helper * v8helper::GetInstance()$/;"	f	class:v8helper
+Java_com_v8demo_V8demoActivity_initclass	v8demo.cpp	/^jboolean Java_com_v8demo_V8demoActivity_initclass(JNIEnv *env,jobject jobj)$/;"	f
+LOCAL_MODULE	Android.mk	/^LOCAL_MODULE := libv8demo$/;"	m
+LOCAL_PATH	Android.mk	/^LOCAL_PATH:= $(call my-dir)$/;"	m
+LOCAL_PRELINK_MODULE	Android.mk	/^LOCAL_PRELINK_MODULE := false$/;"	m
+LOCAL_SHARED_LIBRARIES	Android.mk	/^LOCAL_SHARED_LIBRARIES := libcutils$/;"	m
+LOCAL_SRC_FILES	Android.mk	/^LOCAL_SRC_FILES := v8demo.cpp$/;"	m
+LOCAL_STATIC_LIBRARIES	Android.mk	/^LOCAL_STATIC_LIBRARIES := libv8$/;"	m
+LOG_TAG	v8demo.h	10;"	d
+LOG_TAG	v8demo.h	12;"	d
+_V8_DEMO_H__	v8demo.h	2;"	d
+_val	v8demo.cpp	/^v8helper * v8helper::_val = NULL;$/;"	m	class:v8helper	file:
+_val	v8demo.h	/^    static v8helper * _val;$/;"	m	class:v8helper
+m_context	v8demo.h	/^    v8::Persistent<v8::Context> m_context;$/;"	m	class:v8helper
+m_handle_scope	v8demo.h	/^    v8::HandleScope m_handle_scope;$/;"	m	class:v8helper
+m_templ	v8demo.h	/^    v8::Handle<v8::ObjectTemplate> m_templ;$/;"	m	class:v8helper
+v8helper	v8demo.cpp	/^v8helper::v8helper()$/;"	f	class:v8helper
+v8helper	v8demo.h	/^class v8helper$/;"	c

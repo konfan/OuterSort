@@ -1,0 +1,45 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Java_com_v8test_v8wrapper_v8add	oldv8wrapper.cpp	/^Java_com_v8test_v8wrapper_v8add(JNIEnv * env,const jobject &obj,$/;"	f
+Java_com_v8test_v8wrapper_v8add	v8wrapper.cpp	/^jint Java_com_v8test_v8wrapper_v8add(JNIEnv *env,jobject jobj,jint a,jint b)$/;"	f
+Java_com_v8test_v8wrapper_v8run	oldv8wrapper.cpp	/^Java_com_v8test_v8wrapper_v8run(JNIEnv * env, jobject & obj, jbyteArray js_source){$/;"	f
+Java_com_v8test_v8wrapper_v8run	v8wrapper.cpp	/^void Java_com_v8test_v8wrapper_v8run(JNIEnv *env,jobject jobj,jbyteArray jsource)$/;"	f
+Java_com_v8test_v8wrapper_v8str	oldv8wrapper.cpp	/^Java_com_v8test_v8wrapper_v8str(JNIEnv * env,$/;"	f
+Java_com_v8test_v8wrapper_v8str	v8wrapper.cpp	/^jstring Java_com_v8test_v8wrapper_v8str(JNIEnv * env, jobject jobj)$/;"	f
+LOCAL_MODULE	Android.mk	/^LOCAL_MODULE := libv8wrapper$/;"	m
+LOCAL_PATH	Android.mk	/^LOCAL_PATH:= $(call my-dir)$/;"	m
+LOCAL_PRELINK_MODULE	Android.mk	/^LOCAL_PRELINK_MODULE := false$/;"	m
+LOCAL_SHARED_LIBRARIES	Android.mk	/^LOCAL_SHARED_LIBRARIES := libcutils$/;"	m
+LOCAL_SRC_FILES	Android.mk	/^LOCAL_SRC_FILES := v8wrapper.cpp$/;"	m
+LOCAL_STATIC_LIBRARIES	Android.mk	/^LOCAL_STATIC_LIBRARIES := libv8$/;"	m
+LOG_TAG	oldv8wrapper.cpp	7;"	d	file:
+Print	addfunction.cpp	/^Handle<Value> Print(const Arguments& args)$/;"	f
+ToCString	addfunction.cpp	/^const char * ToCString(const String::Utf8Value& value)$/;"	f
+bv8init	v8wrapper.cpp	/^bool bv8init = false;$/;"	v
+call_java	oldv8wrapper.cpp	/^static void call_java(JNIEnv *env, jobject & thiz)$/;"	f	file:
+call_setc	v8wrapper.cpp	/^static void call_setc(JNIEnv *env, jobject thiz)$/;"	f	file:
+g_context	v8wrapper.cpp	/^static v8::Persistent<v8::Context> g_context = NULL;$/;"	v	file:
+g_handle_scope	v8wrapper.cpp	/^static v8::HandleScope g_handle_scope = NULL;$/;"	v	file:
+g_jnienv	oldv8wrapper.cpp	/^static JNIEnv * g_jnienv = NULL;$/;"	v	file:
+g_templ	v8wrapper.cpp	/^static v8::Handle<v8::ObjectTemplate> g_templ = NULL;$/;"	v	file:
+g_textview	oldv8wrapper.cpp	/^static jobject * g_textview = NULL;$/;"	v	file:
+js_add	oldv8wrapper.cpp	/^static v8::Handle<v8::Value> js_add(const v8::Arguments &args)$/;"	f	file:
+js_add	v8wrapper.cpp	/^static v8::Handle<v8::Value> js_add(const v8::Arguments &args)$/;"	f	file:
+js_buf	v8wrapper.cpp	/^static char * js_buf = NULL;$/;"	v	file:
+js_fname	addfunction.cpp	/^const char *js_fname = "t.js";$/;"	v
+jssource	oldv8wrapper.cpp	/^const char * jssource = " 'hhaaa' + 'bbbb'";$/;"	v
+load_js	addfunction.cpp	/^Handle<String> load_js(const char * jsfile)$/;"	f
+main	addfunction.cpp	/^int main(int argc,char **argv)$/;"	f
+myadd	addfunction.cpp	/^Handle<Value> myadd(const Arguments & args)$/;"	f
+println	addfunction.cpp	3;"	d	file:
+regist_global_funcs	v8wrapper.cpp	/^static void regist_global_funcs(const v8::Handle<v8::ObjectTemplate> &templ)$/;"	f	file:
+register_global_funcs	oldv8wrapper.cpp	/^static void register_global_funcs(const v8::Handle<v8::ObjectTemplate> &templ)$/;"	f	file:
+set_text	oldv8wrapper.cpp	/^static v8::Handle<v8::Value> set_text(const v8::Arguments &args)$/;"	f	file:
+set_text	v8wrapper.cpp	/^static v8::Handle<v8::Value> set_text(const v8::Arguments &args)$/;"	f	file:
+textstr	oldv8wrapper.cpp	/^static char textstr[128];$/;"	v	file:
+to_cstr	oldv8wrapper.cpp	/^static const char * to_cstr(const v8::String::Utf8Value& value){$/;"	f	file:
+v8_init	v8wrapper.cpp	/^static void v8_init()$/;"	f	file:
