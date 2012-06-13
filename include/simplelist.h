@@ -15,8 +15,7 @@ struct entry {
  * list head
  * @prev: the first node in list 
  * @next: the last node in list
- * first == end == NULL : list is empty
- * first == end != NULL : only one node
+ * first == end == head: list is empty
  */
 typedef struct entry entry_head;
 
@@ -50,6 +49,8 @@ static void list_add( entry_head *head, struct entry *new )
     new->next = head;
     end->next = new;
     head->next = new;
+    if( head->prev == head)
+        head->prev = new;
 }
 
 /**
@@ -62,6 +63,8 @@ static struct entry * list_cut_first( entry_head *head )
 {
     struct entry * first = head->prev;
     head->prev = first->next;
+    if( head->prev == head )
+        head->next = head;
     return first;
 }
 
