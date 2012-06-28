@@ -1,0 +1,48 @@
+#!/bin/bash
+
+# chkconfig: 2345 92 19
+# description: manage transcodec service
+# processname: convertd
+
+export LD_LIBRARY_PATH=$LD_LIBRARY:/usr/local/lib
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/lib/pkgconfig:/usr/local/lib/pkgconfig
+
+INSTALLDIR=/usr/local/transcodec
+PY=$(which python)
+
+start() {
+    $PY ${INSTALLDIR}/service/convertd.py start
+}
+
+stop() {
+    $PY ${INSTALLDIR}/service/convertd.py stop
+}
+
+restart() {
+    $PY ${INSTALLDIR}/service/convertd.py restart
+}
+
+status() {
+    $PY ${INSTALLDIR}/service/convertreq.py
+}
+
+case "$1" in
+    'start')
+        start
+        ;;
+    'stop')
+        stop
+        ;;
+    'restart')
+        restart
+        ;;
+    'status')
+        status
+        ;;
+    *)
+        echo ""
+        echo "Usage: $0 {start|restart|stop|status}"
+        echo ""
+        ;;
+esac
+

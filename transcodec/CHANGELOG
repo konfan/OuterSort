@@ -1,0 +1,37 @@
+转码
+	fan.fei@datatom.com
+	
+V 1.1.2  2012.6.19
+svn 地址 svn://192.168.1.5/program/trunk/src/dtcore/transcodec
+svn 版本 3288
+改动记录:
+	增加文档转 pdf 引擎 v0.1
+	扩展转码服务, 现在可以接受文档转 pdf 请求了, 详见 INTERFACE.doc
+	
+V 1.1.1  2012.6.14
+svn 地址 svn://192.168.1.5/program/trunk/src/dtcore/transcodec
+svn 版本 3261
+改动记录:
+	向 list 命令的返回内容增加 history_list 字段, 格式为 [id, src, retvalue], 详见INTERFACE.doc
+
+V 1.1.0  2012.6.6
+svn 地址 svn://192.168.1.5/program/trunk/src/dtcore/transcodec
+svn 版本 3220
+改动记录:
+	升级 media_engine 至 v0.9
+	增强安装和卸载工具
+	增加服务监控功能, 可自动通过 daemonconvertd 监控运行情况, 保证服务可用性
+	扩展服务交互接口, 增加 engine 字段, 为增加 engine 种类提供弹性
+	更新接口交互文档
+	更新README
+	修复已发现的bug, 详见 svn log
+	
+	
+	
+V 1.0.0  2012.5.15
+svn 地址 svn://192.168.1.5/program/trunk/src/dtcore/transcodec
+svn 版本 3055
+
+提供基于unix socket 的转码服务
+支持将视频文件转换为webm格式
+接口和详细说明见README

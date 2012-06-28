@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# chkconfig: 35 93 18 
+# description: manage transcodec service
+# processname: convertd
+
+INSTALLDIR=/usr/local/transcodec
+PY=$(which python)
+
+WAITTIME=60
+
+if test ! -e $INSTALLDIR
+then
+    echo ""
+    echo "transcodec not installed"
+    echo ""
+    exit 1
+fi
+
+checkservice() {
+    runstate=$(service convertd status)
+    if [ "$runstate"x == "service is alive"x ]
+    then
+        return 0
+    fi
+    return 1
+}
+
+while true; do
+    process=$(ps aux|grep -v grep|grep "convertd.py start")
+    if test -z "$process"
+    then
+		/bin/rm /tmp/convertd.pid* 2>/dev/null
+        $PY ${INSTALLDIR}/service/convertd.py start >/dev/null 2>&1 &
+    fi
+
+	sleep $WAITTIME
+
+    checkservice
+    if [ ! $? -eq 0 ]
+    then
+		/bin/rm /tmp/convertd.pid* 2>/dev/null
+        $PY ${INSTALLDIR}/service/convertd.py stop >/dev/null 2>&1 &
+        $PY ${INSTALLDIR}/service/convertd.py start >/dev/null 2>&1 &
+    fi
+done

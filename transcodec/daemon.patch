@@ -1,0 +1,40 @@
+--- /root/Downloads/python-daemon-1.5.5/daemon/pidlockfile.py	2010-01-20 19:33:10.000000000 +0800
++++ /usr/lib/python2.6/site-packages/python_daemon-1.5.5-py2.6.egg/daemon/pidlockfile.py	2012-04-17 15:04:37.548792272 +0800
+@@ -16,8 +16,8 @@
+ import os
+ import errno
+ 
+-from lockfile import (
+-    LinkFileLock,
++from lockfile.linklockfile import (
++    LinkLockFile,
+     AlreadyLocked, LockFailed,
+     NotLocked, NotMyLock,
+     )
+@@ -30,7 +30,7 @@
+     """ Raised when parsing contents of PID file fails. """
+ 
+ 
+-class PIDLockFile(LinkFileLock, object):
++class PIDLockFile(LinkLockFile, object):
+     """ Lockfile implemented as a Unix PID file.
+ 
+         The PID file is named by the attribute `path`. When locked,
+@@ -38,7 +38,7 @@
+         containing the process ID (PID) of the process that acquired
+         the lock.
+ 
+-        The lock is acquired and maintained as per `LinkFileLock`.
++        The lock is acquired and maintained as per `LinkLockFile`.
+ 
+         """
+ 
+@@ -53,7 +53,7 @@
+ 
+             Locks the PID file then creates the PID file for this
+             lock. The `timeout` parameter is used as for the
+-            `LinkFileLock` class.
++            `LinkLockFile` class.
+ 
+             """
+         super(PIDLockFile, self).acquire(*args, **kwargs)

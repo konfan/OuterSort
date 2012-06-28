@@ -1,0 +1,36 @@
+fan.fei@datatom.com
+版本 1.1.0
+
+运行 ./install.sh 自动安装并启动服务
+服务交互接口见 INTERFACE.doc
+.
+├── CHANGELOG							
+├── daemon.patch
+├── lockfile-0.9.1.tar.gz			依赖包
+├── python-daemon-1.5.5.tar.gz		依赖包
+├── README							
+├── INTERFACE.doc					接口说明文档							
+├── transcodec
+│   ├── config.conf					配置文件
+│   ├── convertd					service 脚本
+│   ├── convertdaemon				daemon 脚本
+│   ├── engine						引擎
+│   │   ├── media_engine.py				多媒体转码引擎(ffmpeg)
+│   │   └── runcmd.py					命令行执行引擎
+│   ├── helper
+│   │   ├── history.py				工具
+│   │   ├── jsontool.py					json 封装
+│   │   ├── logger.py					日志工具
+│   │   ├── optconfig.py				配置读取工具
+│   │   ├── opttool.py					配置读取工具
+│   │   └── sematool.py					信号量工具
+│   ├── service						服务
+│   │   ├── convertd.py					转码服务实现
+│   │   ├── convertreq.py				转码请求客户端(调试, 测试用)
+│   │   └── convertservice.py			转码服务框架
+│   └── test						测试
+│       ├── testConvertd.py				转码测试工具
+│       └── testConvertTime.py			ffmpeg benchmark 工具
+├── install.sh						安装脚本
+└── uninstall.sh					卸载脚本
+
